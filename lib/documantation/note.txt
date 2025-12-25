@@ -1,0 +1,55 @@
+ Here’s a clean, production-ready Flutter Clean Architecture template you can copy directly into your project.
+ I’ll give you:
+ 📁 Folder structure (final form)
+ 🧱 Explanation of each layer
+ 🧩 Full demo template code (Domain → Data → Presentation)
+ 🚀 How to scale
+ Perfect for medium-to-large apps (auth, feed, product, etc.).
+ ✅ 1. CLEAN ARCHITECTURE FOLDER STRUCTURE (Recommended)
+ /lib
+  └── src
+       ├── core
+       │    ├── errors
+       │    ├── usecases
+       │    ├── utils
+       │    └── services
+       │
+       ├── features
+       │    └── auth
+       │          ├── domain
+       │          │     ├── entities
+       │          │     ├── repositories
+       │          │     └── usecases
+       │          │
+       │          ├── data
+       │          │     ├── models
+       │          │     ├── datasources
+       │          │     └── repositories
+       │          │
+       │          └── presentation
+       │                ├── pages
+       │                ├── blocs / cubits / providers
+       │                └── widgets
+       │
+       └── app
+            ├── routes
+            └── app.dart
+
+
+✅ 2. LAYERS EXPLAINED (VERY SIMPLE)
+Domain Layer
+Pure business logic.
+Entity → Model এর কোন dependency নাই।
+UseCase → এক লাইনের logic or বড় logic.
+login(email, pass) → returns UserEntity
+Data Layer
+Remote API / Local DB / Repository Implementation.
+Models only exist here.
+Presentation Layer
+UI, State management (Bloc, Provider, Riverpod, etc.).
+Widgets + Pages.
+✅ 3. FULL CLEAN ARCHITECTURE DEMO (Auth Example)
+Below is a minimal real template you can directly paste.
+🍀 DOMAIN
+Entity
+// lib/src/features/auth/domain/entities/user_entity.dart
