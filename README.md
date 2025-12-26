@@ -1,5 +1,7 @@
- /lib
-  └── src
+" /lib
+
+  └── src 
+  
        ├── core
        │    ├── errors
        │    ├── usecases
@@ -25,4 +27,4 @@
        │
        └── app
             ├── routes
-            └── app.dart
+            └── app.dart"
